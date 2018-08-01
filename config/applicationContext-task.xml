@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+				http://www.springframework.org/schema/aop 
+				http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+				http://www.springframework.org/schema/tx 
+				http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+				http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+				">
+	
+	<!-- 发送邮件到客服邮箱 -->
+	<!-- <bean id="sendEmailUtil" class="com.hongwei.futures.task.SendEmailUtil"></bean>
+	<bean id="sendEmailManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sendEmailUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="sendEmailManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="sendEmailManager" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean> -->
+
+	<!-- 每天晚上12点 修改当天解套者的账户状态 -->
+	<bean id="updateStatusTaskUtil" class="com.hongwei.futures.task.UpdateStatusTaskUtil"></bean>
+	<bean id="updateStatusTaskManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="updateStatusTaskUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="updateStatuskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="updateStatusTaskManager" />
+		<property name="cronExpression" value="0 30 23 * * ?" />
+	</bean>
+	
+	
+	<!-- 写K线 -->
+	<bean id="trdTaskUtil" class="com.hongwei.futures.task.TrdTaskUtil"></bean>
+	<bean id="trdTaskManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="trdTaskUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="trdTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="trdTaskManager" />
+		<property name="cronExpression" value="0 30 15 * * ?" />
+	</bean>
+	
+	<!-- 定时更新期货证券从业人员信息 -->
+	<bean id="crawlTaskUtil" class="com.hongwei.futures.task.CrawlTaskUtil"></bean>
+	<bean id="crawlTaskManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="crawlTaskUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="crawlTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="crawlTaskManager" />
+		<property name="cronExpression" value="0 0 3 * * ?" />
+	</bean>
+	
+	<!-- 定时续交日配管理费 -->
+	<bean id="dayMoneyUtil" class="com.hongwei.futures.task.DayMoneyUtil"></bean>
+	<bean id="dayMoneyManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="dayMoneyUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="dayMoneyTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="dayMoneyManager" />
+		<property name="cronExpression" value="0 30 15 ? * MON-FRI" />
+	</bean>
+	<!-- 定时续交月配管理费 -->
+	<bean id="monthMoneyUtil" class="com.hongwei.futures.task.MonthMoneyUtil"></bean>
+	<bean id="monthMoneyManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="monthMoneyUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="monthMoneyTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="monthMoneyManager" />
+		<property name="cronExpression" value="0 30 15 * * ?" />
+	</bean>
+	<!-- 定时关闭过期方案 -->
+	<bean id="closeProgramUtil" class="com.hongwei.futures.task.CloseProgramUtil"></bean>
+	<bean id="closeProgramManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="closeProgramUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="closeProgramTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="closeProgramManager" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	</bean>
+	<!-- 定时结算到期的增配子方案 -->
+	<bean id="clearSonProgramUtil" class="com.hongwei.futures.task.ClearSonProgramUtil"></bean>
+	<bean id="clearSonProgramManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="clearSonProgramUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="clearSonProgramTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="clearSonProgramManager" />
+		<property name="cronExpression" value="0 30 15 ? * MON-FRI" />
+	</bean>
+	<!-- 定时查询追加保证金资金调整的结果 -->
+	<bean id="AddMarginUtil" class="com.hongwei.futures.task.AddMarginUtil"></bean>
+	<bean id="AddMarginManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="AddMarginUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="AddMarginTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="AddMarginManager" />
+		<property name="cronExpression" value="0/30 * * * * ?" />
+	</bean>
+	
+	<!-- 定时查询提取利润资金调整的结果 -->
+	<bean id="DrawProfitsUtil" class="com.hongwei.futures.task.DrawProfitsUtil"></bean>
+	<bean id="DrawProfitsManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="DrawProfitsUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="DrawProfitsTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="DrawProfitsManager" />
+		<property name="cronExpression" value="0/30 * * * * ?" />
+	</bean>
+	
+	<!-- 定时查询结算资金调整的结果 -->
+	<bean id="OverProgramUtil" class="com.hongwei.futures.task.OverProgramUtil"></bean>
+	<bean id="OverProgramManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="OverProgramUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="OverProgramTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="OverProgramManager" />
+		<property name="cronExpression" value="0/30 16,20 15,16 * * ?" />
+	</bean>
+	
+	<!-- 定时查询开户的结果 -->
+	<bean id="CheckProgramUtil" class="com.hongwei.futures.task.CheckProgramUtil"></bean>
+	<bean id="CheckProgramManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="CheckProgramUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="CheckProgramTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="CheckProgramManager" />
+		<property name="cronExpression" value="0/30 * * * * ?" />
+	</bean>
+	
+	<!-- 定时发送未发送的短信记录 -->
+	<bean id="SendMessageUtil" class="com.hongwei.futures.task.SendMessageUtil"></bean>
+	<bean id="SendManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="SendMessageUtil" />
+		<property name="targetMethod" value="run"></property>
+	</bean>
+	<bean id="SendMessageTaskManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="SendManager" />
+		<property name="cronExpression" value="0/10 * * * * ?" />
+	</bean>
+	
+	<!-- 定时重置期指大赛账户的资金 -->
+	<bean id="AddMatchByGameUtil" class="com.hongwei.futures.task.AddMatchByGameUtil"></bean>
+	<bean id="AddMatchManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="AddMatchByGameUtil"/>
+		<property name="targetMethod" value="run"/>
+	</bean>
+	<bean id="AddMatchManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="AddMatchManager"/>
+		<property name="cronExpression" value="0 30 8 8 10 ? 2015"/>
+	</bean>
+	
+	<!-- 定时查询方案是否穿仓 -->
+	<bean id="AcrossCabinUtil" class="com.hongwei.futures.task.AcrossCabinUtil"></bean>
+	<bean id="AcrossCabinManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="AcrossCabinUtil"/>
+		<property name="targetMethod" value="run"/>
+	</bean>
+	<bean id="AcrossCabinManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="AcrossCabinManager"/>
+		<property name="cronExpression" value="0 16 15 * * ?"/>
+	</bean>
+	
+	<!-- 定时发劵派劵 -->
+	<bean id="SendStockUtil" class="com.hongwei.futures.task.SendStockUtil"></bean>
+	<bean id="SendStockManager" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="SendStockUtil"/>
+		<property name="targetMethod" value="run"/>
+	</bean>
+	<bean id="SendStockManagerTimer" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="SendStockManager"/>
+		<property name="cronExpression" value="0 0 10,14 * * ?"/>
+	</bean>
+	
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- <ref bean="monthMoneyTaskManagerTimer"/>
+				<ref bean="dayMoneyTaskManagerTimer"/>
+				<ref bean="crawlTaskManagerTimer"/>
+				<ref bean="clearSonProgramTaskManagerTimer"/>
+				<ref bean="AddMarginTaskManagerTimer"/>
+				<ref bean="DrawProfitsTaskManagerTimer"/>
+				<ref bean="OverProgramTaskManagerTimer"/>
+				<ref bean="CheckProgramTaskManagerTimer"/>
+				<ref bean="AcrossCabinManagerTimer"/>
+				<ref bean="trdTaskManagerTimer"/>
+				<ref bean="AddMatchManagerTimer"/>
+				<ref bean="closeProgramTaskManagerTimer"/>
+				<ref bean="SendMessageTaskManagerTimer"/>
+				<ref bean="updateStatuskManagerTimer"/>
+				<ref bean="SendStockManagerTimer"/>
+				<ref bean="sendEmailManagerTimer"/> -->
+			</list>
+		</property>
+		<property name="quartzProperties">
+            <map><entry key="org.quartz.threadPool.threadCount" value="11"/></map>
+        </property>
+	</bean>
+</beans>

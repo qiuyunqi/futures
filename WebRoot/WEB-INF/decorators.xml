@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/decorators">
+	<!-- 不需要装饰 -->
+	<excludes>
+		<pattern>*/css/*</pattern>  
+	</excludes>
+
+	
+	<decorator name="user" page="user.jsp">
+		<pattern>*/company/*</pattern>
+	</decorator>
+	
+</decorators>

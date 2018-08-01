@@ -1,0 +1,115 @@
+html{width: 100%;height:100%; }
+body {font: 12px Tahoma;margin: 0px auto;width:100%;background: #fefefe;height:100%;background: #ededed; }
+input{border:none;background: #fff;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+.blok{display: block;}
+.center{text-align: center;margin:0 !important;}
+.sucContain{position: absolute;width:100%;height:auto;}
+.containImg{width:100%;height:auto;}
+.bgColor{background: #ededed;}
+.bgWhite{background: #fff;}
+.fotBgCol{background: #ffb900;}
+.imgWidt{display: block;width:100%;}
+.spnTxt{text-align: center;color:#fff;font-size: 1.2em;}
+.aStyBig{display: block;width:80%;margin-left:10%;padding:5px;color:#fff;background: #ff6600;padding:10px 0;margin-top: 5px;font-size: 1.4em;text-align: center;}
+.fullAsty{display: block;width:100%;padding:5px;color:#fff;background: #ff6600;padding:10px 0;margin:30px 0;font-size: 1.4em;text-align: center;}
+.jiange{width:100%;padding:3% 0;}
+.cenTxt{text-align: center;}
+.coloPin{color:#6a1200;}
+.bigSiz{font-size: 4.4em;}
+/*微信首页*/
+.infoList{width:100%;}
+.listTit{position: relative;}
+.listCircle{width:100%;}
+#lineTit{margin:0 auto;display: block;text-align: center;color:#231815;}
+.lineTx,.listTiBtn{margin:15px 0;}
+.listTiBtn a{display: block;width:33.3%;float: left;}
+.listTiBtn a img{display: block;width:70%;margin:0 15%;}
+.footer{position: fixed;bottom: 0;width:100%;padding:2% 0;height:72px; }
+/*上传截图*/
+.uploadTxt{color:#004e99;font-size:1.4em;}
+.infoLi{width:90%;margin-left:5%;}
+.imgWidtBig{display: block;width:90%;margin:30% 5% 0;}
+.hide{width:100%;height:100%;background:transparent;background-color: rgba(0, 0, 0, 0.8);position: absolute;z-index:33;top: 0;}
+.hide .clos{position: absolute;right:5px;top:5px;}
+#upLoadImg{background: #fff;text-align: center;padding-bottom: 15px;}
+#upLoadImg span{font-size:1.2em;}
+.hy{text-align: center;font-size:1.2em;}
+.jkxy{color:#00aaac;}
+/*弹窗绑定手机号*/
+.fucBg{position: absolute;width:90%;left:5%;top:25%;}
+.fucBgHead{position: absolute;top:-70px;width:30%;}
+.fucBgTip{display: block;width:60%;margin-left: 30%;}
+.fucTxt{width: 90%;font-size:1em;background: #ffb900;position: relative;margin-left:5%;border-radius: 35px 35px 0 0;padding: 5px 0;}
+.userIn{width:80%;margin:0 0 10px 10%;background: #ffd669;}
+.userIn input{background: #ffd669;padding:15px 0;}
+.fucBgTxt{width:90%;margin-left:5%;background: #ffb900;border-radius: 0 0 35px 35px;color:#8d6600;font-size: 1.1em;}
+.fucBgTxt label{padding-left:5px;}
+#phone{width:60%;}
+#code{width:30%;}
+#msgbtn{font-size:0.8em;background: #ffebb7 none repeat scroll 0 0;float: right;padding: 15px 2px;color:#ff7616;}
+.yanzhengAll{display: inline;}
+.btnAlls{padding:5px 0 40px;width:80%;margin-left:10%;}
+.btnAlls a{display: block;padding: 5px 0;text-align: center;width: 45%;}
+.wxCancel{background: #ffd669;color:#8d6600;float:left;}
+.wxSure{background: #ff7616;color:#fff;float: right;}
+@media screen and (max-width:240px){
+   .fucBgHead{top: -30px;}
+   .fucBgTxt{font-size: 0.8em;}
+   .fucBg{top:15%;}
+}
+@media screen and (min-width:768px){
+   .fucBgHead{top: -170px;}
+}
+/*匹配成功*/
+.matcSucSp{color:#1f5d8d;font-size:1.4em;display: block;background: #ffc733;padding:10px 0;}
+.matcSucSec{color:#fff;font-size:1.1em;display: block;background: #ffc733;padding:0 0 10px 0;}
+.smaWid a{ display: block;float: left;font-size: 1.3em;padding: 10px 0;width: 41%;}
+.matcBtn{margin-top:50px;}
+.againTj{background: #ff6600;color:#fff;margin:0 6%;}
+.bacInd{background: #5a8ab9;color:#fff;}
+.footr{position: fixed;bottom: 0;width:100%;padding:2% 0;height:60px;}
+@media screen and (max-width:240px){
+   .matcBtn{margin-top:10px;}
+   .footr{height:30px;}
+   .matcSucSec{font-size: 0.9em;}
+}
+/*匹配*/
+.matchBg{width:100%;position: relative;  }
+.matchBg span{position: absolute;top: 58%;z-index: 33;display: block;width:100%;}
+@media screen and (max-width:240px){
+   .bigSiz{font-size: 4em;}
+}
+@media screen and (min-width:768px){
+    .bigSiz{font-size: 8em;}
+}
+/*补全信息*/
+.addTit{background: #ffb900;padding:20px 0;}
+.tdyTit{font-size:1.2em;}
+.leijiPri{font-size:1.2em;background: #ffc733;padding:10px 0;}
+.addUse{font-size:1.3em;}
+.addUall{padding:10px 0;}
+.addUsers{color:#004e99;float:right;}
+.addUsLoad{display: block;width:40%;margin: 0 auto;}
+.loads{padding:20px 0;}
+@media screen and (max-width:240px){
+   .loads{padding: 20px 0 90px;}
+   .addUse{font-size:1em;}
+}
+/*下载app*/
+.bordRadiu{border-radius:35px;background: #ffb900 none repeat scroll 0 0;font-size: 1.1em;margin-left: 5%;padding: 5px 0;position: relative;width: 90%;}
+.loadApp{padding:30px 0 20px;}
+@media screen and (max-width:240px){
+   .bordRadiu{font-size:0.8em;}
+   .addUse{font-size:1em;}
+}
+/*昨日盈利*/
+.profitList{height: 50px;padding:10px 5%; }
+.coloGray{color:#666666;}
+.flatL{float: left;}
+.flatR{float: right;}
+.padHeg{padding-bottom: 5px;}
+.coloRed{color:#ff6600;}
+.colorGre{color:#01aaad;}

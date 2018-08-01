@@ -1,0 +1,23 @@
+body{ font-family: "PingHei","Microsoft YaHei" ! important;}
+.tip{ width: 600px;border: 1px solid #eaeaea; }
+.tip >p{ width:600px;height: 40px; background: #2db1e1;margin: 0;color: #ffffff; text-indent: 1em;line-height: 40px;border: 1px solid #eaeaea;  }
+.tip-content{ width: 550px;margin: 20px auto; }
+.tip-content h4{text-align: center;font-size: 24px;color: #f60;margin: 0; }
+.tip-content>p{ text-align: center;font-size: 20px; }
+.contentDown-img{ display: block;float: left; }
+.tip-contentDown{ margin: 20px auto; }
+.contentDown-rgt p{line-height: 22px;}
+.tiemwrong{ width: 130px; }
+.succes{ width: 130px; }
+.fail{ width:130px; }
+.but a{text-decoration: none;display: block;width:50px;height:30px;background: #2db1e1;color:white;text-align: center;line-height: 30px;}
+/*¼õÅä*/
+.minustipLf{width:250px;float:left;}
+.minustcontentDown-img{display: block;margin:20px auto;}
+.minustipLf>p{width:220px;margin:0 auto;text-align: center;}
+.minustip-content>h4{font-size:24px;color:#FF9933;margin:0;float:left;margin-right: 10px;}
+.minustip-content>span{color:#999999; display: block;margin: 20px 0 1px;padding: 10px;}
+.minuscontentDown-rgt{width:320px;border:1px solid #eaeaea;margin-left: 250px;padding:10px;font-size:14px;padding-left:5px;line-height: 18px;}
+.minuscontentDown-rgt p{ margin: 0 0 0 6px;}
+.minusbut{margin: 15px 0;}
+.minusbut a{text-decoration: none;display: block;width:50px;height:30px;background: #2db1e1;color:white;text-align: center;line-height: 30px;}

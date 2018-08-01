@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">
+<urlrewrite decode-using="UTF-8">
+
+	<outbound-rule>
+		<note>
+			The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url)
+			the url /rewrite-status will be rewritten to /test/status/. The above rule and this outbound-rule
+			means that end users should never see the url /rewrite-status only /test/status/ both in thier
+			location bar and in hyperlinks in your pages.
+		</note>
+		<from>/rewrite-status</from>
+		<to>/test/status/</to>
+	</outbound-rule>
+	  
+    <rule> 
+         <from>^/promote?$</from> 
+         <to>/user_promote_forward/promoteLink.htm</to> 
+    </rule>
+     <rule> 
+         <from>notFound</from> 
+         <to>/fu_error/errorPC.htm</to> 
+    </rule>
+     <rule> 
+         <from>serverError</from> 
+         <to>/fu_error/serverError.htm</to> 
+    </rule>
+    <rule> 
+         <from>httpError</from> 
+         <to>/fu_error/httpError.htm</to> 
+    </rule>
+     <rule> 
+         <from>newGuide</from> 
+         <to>/index_guide/newGuide.htm</to> 
+    </rule>
+    <rule> 
+         <from>apply</from> 
+         <to>/index_guide/applyProgress.htm</to> 
+    </rule>
+       <rule> 
+         <from>safe</from> 
+         <to>/index_guide/moneySafe.htm</to> 
+    </rule>
+     <rule> 
+         <from>downLoad</from> 
+         <to>/index_guide/softwareDownload.htm</to> 
+    </rule>
+    <rule> 
+         <from>aboutUs</from> 
+         <to>/index_guide/aboutUs.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/$</from>
+        <!--  <to>/index_info/index.htm</to>  -->
+        <to>/user_center/centerIndex.htm</to>
+    </rule>
+    <rule> 
+         <from>^/app$</from>
+         <to>/index_service/index_guide.htm</to> 
+    </rule>
+    
+    <rule> 
+         <from>^/login$</from>
+         <to>/user_login/userLogin.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/register$</from>
+         <to>/user_login/userReg.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/wqq$</from>
+         <to>/index_options/optionSolicitation.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/yqb$</from>
+         <to>/user_yqb/yqbInfo.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/about$</from>
+         <to>/index_guide/intrCompany.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/contact$</from>
+         <to>/index_guide/map.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/help$</from>
+         <to>/index_guide/culturecompany.htm</to> 
+    </rule>
+    <rule> 
+         <from>^/appHelp$</from>
+         <to>/index_guide/appClientHelp.htm</to> 
+    </rule>
+</urlrewrite>

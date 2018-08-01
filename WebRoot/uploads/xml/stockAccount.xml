@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Accounts>     
+    <Account id="1">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>中泰证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找日内交易团队</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>恒生电子</name>
+        		<code>600570</code>
+        		<number>25800</number>
+        	</share>
+        	<share>
+        		<name>金证股份</name>
+        		<code>600446</code>
+        		<number>18500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="2">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>银河证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>903001</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>找一个靠谱的交易团队合作</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>汇金股份</name>
+        		<code>300368</code>
+        		<number>34000</number>
+        	</share>
+        	<share>
+        		<name>同花顺</name>
+        		<code>300033</code>
+        		<number>29000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="3">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>光大证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1003701</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>日内交易供券</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>东方财富</name>
+        		<code>300059</code>
+        		<number>70000</number>
+        	</share>
+        	<share>
+        		<name>中科金财</name>
+        		<code>002657</code>
+        		<number>33000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="4">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>爱建证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁帮我做T</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>亿纬锂能</name>
+        		<code>300014</code>
+        		<number>12000</number>
+        	</share>
+        	<share>
+        		<name>天齐锂业</name>
+        		<code>002466</code>
+        		<number>18900</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="5">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>安信证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找最强交易员</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>赣锋锂业</name>
+        		<code>002460</code>
+        		<number>22000</number>
+        	</share>
+        	<share>
+        		<name>上海普天</name>
+        		<code>600680</code>
+        		<number>77000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="6">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>财富证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1305801</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>股票T＋0</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>当升科技</name>
+        		<code>300073</code>
+        		<number>10000</number>
+        	</share>
+        	<share>
+        		<name>动力源</name>
+        		<code>600405</code>
+        		<number>13500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="7">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>财通证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1406501</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我可以提供稳定券源</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>金固股份</name>
+        		<code>002488</code>
+        		<number>13500</number>
+        	</share>
+        	<share>
+        		<name>数源科技</name>
+        		<code>000909</code>
+        		<number>17500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="8">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>长城证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1507201</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我为你们供券</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>亚太股份</name>
+        		<code>002284</code>
+        		<number>18000</number>
+        	</share>
+        	<share>
+        		<name>万安科技</name>
+        		<code>002590</code>
+        		<number>22000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="9">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>长江证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1607901</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我这里有大波动股票</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>中原内配</name>
+        		<code>002448</code>
+        		<number>35000</number>
+        	</share>
+        	<share>
+        		<name>东风科技</name>
+        		<code>600081</code>
+        		<number>4500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="10">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>东北证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1708601</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁能帮我做日内赚钱</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>启明信息</name>
+        		<code>002232</code>
+        		<number>65000</number>
+        	</share>
+        	<share>
+        		<name>拓普集团</name>
+        		<code>601689</code>
+        		<number>34000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="11">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>中银国际</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1809301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>做日内收益分成</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>高德红外</name>
+        		<code>002414</code>
+        		<number>18000</number>
+        	</share>
+        	<share>
+        		<name>科大智能</name>
+        		<code>300222</code>
+        		<number>17500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="12">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>中信证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1910001</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我提供股票你来做日内交易</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>工大高新</name>
+        		<code>600701</code>
+        		<number>50000</number>
+        	</share>
+        	<share>
+        		<name>雷柏科技</name>
+        		<code>002577</code>
+        		<number>42000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="13">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>中信建投</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2010701</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>有人能接我的股票吗</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>英唐智控</name>
+        		<code>300131</code>
+        		<number>96000</number>
+        	</share>
+        	<share>
+        		<name>劲胜精密</name>
+        		<code>300083</code>
+        		<number>220000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="14">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>招商证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2111401</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找靠谱的日内交易员</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>思创医惠</name>
+        		<code>300078</code>
+        		<number>55000</number>
+        	</share>
+        	<share>
+        		<name>佳讯飞鸿</name>
+        		<code>300213</code>
+        		<number>42000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="15">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>五矿证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2212101</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁来帮我做日内</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>华东数控 </name>
+        		<code>002248</code>
+        		<number>75000</number>
+        	</share>
+        	<share>
+        		<name>迪马股份</name>
+        		<code>600565</code>
+        		<number>30000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="16">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>申万宏源</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2312801</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>急急急找日内交易员合作</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>山河智能</name>
+        		<code>002097</code>
+        		<number>70000</number>
+        	</share>
+        	<share>
+        		<name>英唐智能</name>
+        		<code>300131</code>
+        		<number>60000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="17">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>平安证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2413501</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我有一些股票要出借</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>永创智能</name>
+        		<code>603901</code>
+        		<number>40000</number>
+        	</share>
+        	<share>
+        		<name>曙光股份</name>
+        		<code>600303</code>
+        		<number>22000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="18">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>九州证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2514201</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我想做日内交易试试</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>和顺电气</name>
+        		<code>300141</code>
+        		<number>85000</number>
+        	</share>
+        	<share>
+        		<name>成飞集成</name>
+        		<code>002190</code>
+        		<number>33000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="19">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>方正证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2614901</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我要做日内回转交易</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>融捷股份</name>
+        		<code>002192</code>
+        		<number>44000</number>
+        	</share>
+        	<share>
+        		<name>中恒电气</name>
+        		<code>002360</code>
+        		<number>36000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="20">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>国信证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2715601</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁帮我做日内回转交易</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>欣泰电气</name>
+        		<code>300372</code>
+        		<number>110000</number>
+        	</share>
+        	<share>
+        		<name>赢合科技</name>
+        		<code>300357</code>
+        		<number>27000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="21">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>恒泰证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2816301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁是最强交易员</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>顺网科技</name>
+        		<code>300113</code>
+        		<number>64000</number>
+        	</share>
+        	<share>
+        		<name>联络互动</name>
+        		<code>002280</code>
+        		<number>22000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="22">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>九州证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>2917001</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>我有大量的股票底仓给你们</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>创维数字</name>
+        		<code>000810</code>
+        		<number>35000</number>
+        	</share>
+        	<share>
+        		<name>佳创视讯</name>
+        		<code>300264</code>
+        		<number>25000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <!--  -->
+    <Account id="23">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>光大证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1003701</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>日内交易供券</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>博闻科技</name>
+        		<code>600883</code>
+        		<number>33000</number>
+        	</share>
+        	<share>
+        		<name>惠泉啤酒</name>
+        		<code>600573</code>
+        		<number>75000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="24">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>爱建证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁帮我做T</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>北信源</name>
+        		<code>300352</code>
+        		<number>23000</number>
+        	</share>
+        	<share>
+        		<name>卫士通</name>
+        		<code>002268</code>
+        		<number>61000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="25">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>安信证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找最强交易员</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>东方通</name>
+        		<code>300379</code>
+        		<number>8500</number>
+        	</share>
+        	<share>
+        		<name>美亚柏科</name>
+        		<code>300188</code>
+        		<number>60000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="26">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>中泰证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找日内交易团队</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>兆日科技</name>
+        		<code>300333</code>
+        		<number>34000</number>
+        	</share>
+        	<share>
+        		<name>南威软件</name>
+        		<code>603636</code>
+        		<number>53000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="27">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>银河证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>903001</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>找一个靠谱的交易团队合作</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>华丽家族</name>
+        		<code>600503</code>
+        		<number>77000</number>
+        	</share>
+        	<share>
+        		<name>乐通股份</name>
+        		<code>002319</code>
+        		<number>37500</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="28">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>光大证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>1003701</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>日内交易供券</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>方太碳素</name>
+        		<code>600516</code>
+        		<number>33000</number>
+        	</share>
+        	<share>
+        		<name>中国宝安</name>
+        		<code>000009</code>
+        		<number>27000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="29">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>爱建证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>谁帮我做T</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>中国一重</name>
+        		<code>601106</code>
+        		<number>150000</number>
+        	</share>
+        	<share>
+        		<name>中国核电</name>
+        		<code>601985</code>
+        		<number>60000</number>
+        	</share>
+        </Shares>
+    </Account> 
+    
+    <Account id="30">      
+        <openUser>王先生</openUser><!-- 开户姓名 -->     
+        <openEquity>安信证券</openEquity><!-- 开户劵商 -->     
+        <salesDept>暂无</salesDept><!-- 营业部 -->      
+        <capitalAccount>802301</capitalAccount><!-- 资金账户 -->
+        <capitalPassword>ODg4ODg4</capitalPassword><!-- 交易密码888888 -->
+        <accountType>1</accountType><!-- 普通账户 -->
+        <profitModel>0</profitModel><!-- 稳定收益 -->
+        <available>0.00</available><!-- 初始可用市值 -->
+        <availableSplit>我要40%</availableSplit><!-- 年化可用分成 -->
+        <ableMoney>0.00</ableMoney><!-- 可用资金 -->
+        <commission>万2.5</commission><!-- 佣金 -->
+        <profitConfig>0.00</profitConfig><!-- 收益分配 -->
+        <message>寻找最强交易员</message><!-- 留言 -->
+        <isPayMargin>0</isPayMargin><!-- 是否缴纳保证金(使用过后标记为1) -->
+        <Shares>
+        	<share>
+        		<name>中原环保</name>
+        		<code>000544</code>
+        		<number>46000</number>
+        	</share>
+        	<share>
+        		<name>国祯环保</name>
+        		<code>300388</code>
+        		<number>83000</number>
+        	</share>
+        </Shares>
+    </Account> 
+</Accounts>

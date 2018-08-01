@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.action.extension" value="htm" />
+	<constant name="struts.convention.result.path" value="/WEB-INF/content/">
+	</constant>
+	<constant name="struts.multipart.saveDir" value="temp"></constant>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+	<constant name="struts.custom.i18n.resources" value="messages" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.freemarker.manager.classname" value="com.hongwei.futures.util.ExtendedFreemarkerManager" />
+	
+	<package name="control-center" extends="convention-default">
+		<default-interceptor-ref name="defaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="reLogin" type="redirect">
+				../user_login/userLogin.htm
+			</result>
+			<result name="reAdminLogin" type="redirect">
+				../admin_login/adminLogin.htm
+			</result>
+			<result name="error" type="redirect">
+				../NotFound
+			</result>
+			<result name="nopermission" type="redirect">
+				../admin_login/nopermission.htm
+			</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="error"
+				exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+	</package>
+	
+	
+	<!-- 拦截器配置  -->
+	<package name="fu_user" extends="control-center">
+		<!-- <interceptors>
+			<interceptor name="loginInterceptor" class="com.hongwei.futures.web.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="loginStack"></default-interceptor-ref> -->
+	</package>
+	
+	<package name="fu_common" extends="control-center">
+		<interceptors>
+			<interceptor name="noLoginInterceptor" class="com.hongwei.futures.web.interceptor.NoLoginInterceptor"></interceptor>
+			<interceptor-stack name="noLoginStack">
+				<interceptor-ref name="noLoginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="noLoginStack"></default-interceptor-ref>
+	</package>
+	
+	<!-- 接口类 -->
+	<package name="api_package" extends="control-center">
+		<interceptors>
+			<interceptor name="signInterceptor" class="com.hongwei.futures.web.interceptor.SignInterceptor"></interceptor>
+			<interceptor-stack name="signStack">
+				<interceptor-ref name="signInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="signStack"></default-interceptor-ref>
+	</package>
+		
+	<package name="admin" extends="control-center">
+		<interceptors>
+			<interceptor name="adminLoginInterceptor" class="com.hongwei.futures.web.interceptor.AdminLoginInterceptor"></interceptor>
+			<interceptor name="checkPurviewInterceptor" class="com.hongwei.futures.web.interceptor.PurviewInterceptor"></interceptor>
+			
+			<interceptor-stack name="defaultStack">
+				<!-- <interceptor-ref name="adminLoginInterceptor"></interceptor-ref> -->
+				<interceptor-ref name="checkPurviewInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	</package>
+	
+	<!-- 微信余券宝 2016-07-06 -->
+	<package name="wx_yqb" extends="control-center">
+		<interceptors>
+			<interceptor name="weiXinIntercepor" class="com.hongwei.futures.web.interceptor.WeiXinIntercepor"></interceptor>
+			
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="weiXinIntercepor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	</package>
+	<include file="struts_upload.xml"></include>
+</struts>

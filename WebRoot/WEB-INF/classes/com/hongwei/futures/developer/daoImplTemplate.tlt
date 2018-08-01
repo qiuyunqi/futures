@@ -1,0 +1,17 @@
+package #package#;
+
+import org.springframework.stereotype.Repository;
+import #baseDaoImpl#;
+import #dao#;
+import #model#;
+
+/**
+ * 
+ * @description 自动生成 daoImpl
+ *
+ * @author  小合
+ */
+@Repository
+public class #daoImplName# extends BaseDaoImpl<#entityName#, Long> implements #daoName# {
+
+}

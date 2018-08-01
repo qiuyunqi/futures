@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+				http://www.springframework.org/schema/aop 
+				http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+				http://www.springframework.org/schema/tx 
+				http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+				http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<context:component-scan base-package="com.hongwei.futures">
+		<!-- <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/> -->
+	</context:component-scan>
+	
+	<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+		<property name="alias" value="mysql" />
+		<property name="driver" value="${dataSource.driverClass}" />
+		<property name="driverUrl" value="${dataSource.url}" />
+		<property name="user" value="${dataSource.user}" />
+		<property name="password" value="${dataSource.password}" />
+		<property name="minimumConnectionCount" value="${dataSource.minPoolSize}" />
+		<property name="maximumConnectionCount" value="${dataSource.maxPoolSize}" />
+		<property name="statistics" value="1m,15m,1d" />
+		<property name="maximumActiveTime" value="3000000"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+			    <prop key="hibernate.dialect">
+                    com.hongwei.futures.util.MySQL5LocalDialect   <!--导入上面咱自定义的类-->
+                 </prop>
+<!--		    <prop key="hibernate.dialect">${hibernate.dialect}</prop>-->
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<!-- 批量跟新或删除时使用 -->
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<!-- hibernate事物隔离级别 -->
+				<prop key="hibernate.collection.isolation">${hibernate.collection.isolation}</prop>
+                <!--二级缓存 查询缓存-->
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+				<prop key="hibernate.memcached.memcacheClientFactory">${hibernate.memcached.memcacheClientFactory}</prop>
+				<prop key="hibernate.memcached.commandFactory">${hibernate.memcached.commandFactory}</prop>
+				<prop key="hiberante.memcached.sessionLocator">${hiberante.memcached.sessionLocator}</prop>
+				<prop key="hibernate.memcached.servers">${hibernate.memcached.servers}</prop>
+				<prop key="hibernate.memcached.cacheTimeSeconds">${hibernate.memcached.cacheTimeSeconds}</prop>
+				<prop key="hibernate.memcached.clearSupported">${hibernate.memcached.clearSupported}</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.connection.autocommit">true</prop>
+				<prop key="maximum-active-time">300</prop>
+			</props>
+		</property>
+		<!-- 要扫描的包 hibernate model位置 -->
+		<property name="packagesToScan" value="com.hongwei.futures.model" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- spring 采用xml方式的声明式事务管理  使用tx标签配置-->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="flush*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception" />
+			<tx:method name="del*" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- spring aop 管理 service -->
+	<aop:config>
+		<aop:pointcut id="serviceOperation" expression="execution(* com.hongwei.futures.service.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
+	</aop:config>
+	
+	
+	<!-- xfire webservice整合spring接口配置 -->
+	<!-- <import resource="classpath:org/codehaus/xfire/spring/xfire.xml"/> web.xml如果引入了文件这里就不需要配置-->
+	<bean id="webServiceImpl" class="com.hongwei.futures.web.ws.impl.AppWebServiceImpl"/>
+	<bean name="queryServcie" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="webServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.ws.AppWebService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="addressingHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="addressingHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<bean id="tradeWebServiceImpl" class="com.hongwei.futures.web.trade.impl.TradeWebServiceImpl"/>
+	<bean name="queryServcie1" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="tradeWebServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.trade.TradeWebService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="tradeAddressingHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="tradeAddressingHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<bean id="appTradeWebServiceImpl" class="com.hongwei.futures.web.apptrade.impl.AppTradeWebServiceImpl"/>
+	<bean name="queryServcie2" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeWebServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.apptrade.AppTradeWebService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeaddressingHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeaddressingHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 融云即时聊天 -->
+	<bean id="rongCloudServiceImpl" class="com.hongwei.futures.web.rongyun.impl.RongCloudServiceImpl"/>
+	<bean name="imQueryServcie" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="rongCloudServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.rongyun.RongCloudService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="imaddressingHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="imaddressingHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	
+	<!-- 基础信息 | 发现 -->
+	<bean id="appTradeBasicServiceImpl" class="com.hongwei.futures.web.modulesforapp.basic.impl.AppTradeBasicServiceImpl"/>
+	<bean name="appTradeBasicService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeBasicServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.basic.AppTradeBasicService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeBasicHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeBasicHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 用户管理 -->
+	<bean id="appTradeUserManagerServiceImpl" class="com.hongwei.futures.web.modulesforapp.usermanage.impl.AppTradeUserManagerServiceImpl"/>
+	<bean name="appTradeUserManagerService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeUserManagerServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.usermanage.AppTradeUserManagerService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeUserManagerHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeUserManagerHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 解套者联盟 -->
+	<bean id="appTradeUnrelieveServiceImpl" class="com.hongwei.futures.web.modulesforapp.unrelieve.impl.AppTradeUnrelieveServiceImpl"/>
+	<bean name="appTradeUnrelieveService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeUnrelieveServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.unrelieve.AppTradeUnrelieveService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeUnrelieveHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeUnrelieveHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 看跌涨赢 -->
+	<bean id="appRiseFallServiceImpl" class="com.hongwei.futures.web.modulesforapp.rise_fall.impl.AppRiseFallServiceImpl"/>
+	<bean name="appRiseFallService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appRiseFallServiceImpl"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.rise_fall.AppRiseFallService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appRiseFallHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appRiseFallHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 余劵宝 -->
+	<bean id="appTradeYjbServiceImpl" class="com.hongwei.futures.web.modulesforapp.yjb.impl.AppTradeYjbServiceImpl"/>
+	<bean name="appTradeYjbService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeYjbService"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.yjb.AppTradeYjbService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeYjbHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeYjbHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+	<!-- 销售管理 -->
+	<bean id="appTradeSaleManagerServiceImpl" class="com.hongwei.futures.web.modulesforapp.sale_manager.impl.AppTradeSaleManagerServiceImpl"/>
+	<bean name="appTradeSaleManagerService" class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="appTradeSaleManagerService"/>
+		<property name="serviceClass" value="com.hongwei.futures.web.modulesforapp.sale_manager.AppTradeSaleManagerService"/>
+		<property name="inHandlers">
+			<list>
+				<ref bean="appTradeSaleManagerHandler" />
+			</list>
+		</property>
+	</bean>
+	<!--这个不需要改变,定义的是Handler -->
+	<bean id="appTradeSaleManagerHandler" class="org.codehaus.xfire.addressing.AddressingInHandler"/>
+	
+</beans>

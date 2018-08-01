@@ -1,0 +1,22 @@
+.czym{padding: 30px 40px;font-size:16px;color:black;}
+.czy{margin-bottom:20px;}
+/* input[type=text]{width: 190px;border: 1px solid #d1d1d1;color: #4b4b4b;font-size: 18px;height: 29px;line-height: 29px;padding: 5px 8px;} */
+.shiji{margin-left:15px;}
+.czfs>input[type=radio]{margin-right:5px;}
+.xxczs{margin-left:15px;}
+.zfbyl{color:#fe7e00;}
+.leix{margin-bottom:0px;}
+.leix ul{margin-top:5px;}
+.leix ul li{height:30px;height: 70px;line-height: 70px;margin-left:80px;}
+.leix ul li>input[type=radio]{margin-right:5px;}
+.leix ul li a {border: 1px solid #cccccc;display: inline-block;vertical-align: middle;}
+.leix ul li a img{padding: 5px;}
+.cz{margin-top:0px;}
+.brRadius{border-radius:5px;}
+.heght{height:29px;line-height: 29px;}
+.fntSze{font-size:18px;}
+.widt{width:90px;}
+.smallFnt{font-size:12px;}
+.textRgt{text-align:right;}
+.textLft{text-align:left;}
+.margLft{margin-left:90px;}

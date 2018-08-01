@@ -1,0 +1,14 @@
+package #package#;
+
+import #baseDao#;
+import #model#;
+
+/**
+ * 
+ * @description 自动生成 dao
+ *
+ * @author 小合
+ */
+public interface #daoName# extends BaseDao<#entityName#, Long> {
+
+}

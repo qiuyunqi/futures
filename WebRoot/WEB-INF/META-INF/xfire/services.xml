@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<service xmlns="http://xfire.codehaus.org/config/1.0">
+		<name>AppWebService</name>
+		<serviceClass>com.hongwei.futures.web.ws.AppWebService</serviceClass>
+		<implementationClass>com.hongwei.futures.web.ws.impl.AppWebServiceImpl</implementationClass>
+		
+		<name>TradeWebService</name>
+		<serviceClass>com.hongwei.futures.web.trade.TradeWebService</serviceClass>
+		<implementationClass>com.hongwei.futures.web.trade.impl.TradeWebServiceImpl</implementationClass>
+	</service>
+</beans>

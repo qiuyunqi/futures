@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/content/enterprise_customer/customerList.jsp=UTF-8
+encoding//WebRoot/WEB-INF/content/wx_card_index/cardInfo.jsp=UTF-8
+encoding//WebRoot/WEB-INF/content/wx_card_index/newGuest.jsp=UTF-8
+encoding//WebRoot/WEB-INF/content/wx_hotel_index/showHotelInfo.jsp=UTF-8
+encoding//WebRoot/WEB-INF/content/wx_hotel_index/showRoomInfo.jsp=UTF-8
+encoding//WebRoot/WEB-INF/content/wx_hotel_index/toMyBook.jsp=UTF-8
+encoding//config/application.properties=UTF-8
+encoding//config/config.properties=UTF-8
+encoding//config/freemarker.properties=UTF-8
+encoding//config/log4j.properties=UTF-8
+encoding//config/mail.properties=UTF-8
+encoding//config/oscache.properties=UTF-8
+encoding//config/xwork-conversion.properties=UTF-8
+encoding//src/com/hongwei/home/util/CometInfo.java=GBK
+encoding//src/com/hongwei/home/web/action/wx_nav/BoardAction.java=UTF-8
+encoding/<project>=UTF-8

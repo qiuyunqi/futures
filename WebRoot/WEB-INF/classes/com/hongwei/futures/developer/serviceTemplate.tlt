@@ -1,0 +1,21 @@
+package #package#;
+
+import org.springframework.stereotype.Service;
+import #model#;
+
+/**
+ * 
+ * @description 自动生成 service
+ *
+ */
+@Service
+public interface #serviceName# {
+	
+	//====================== 基本 C R U D 方法  ===========================
+	public #entityName# get(Long id) ;
+	
+	public void save(#entityName# entity) ;
+	
+	public void delete(Long id) ;
+	
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="control-center" location="10,115" size="170,70" />
+  <package name="admin" location="10,10" size="170,70" />
+  <package name="site" location="255,115" size="170,70" />
+  <include file="struts_upload.xml" location="20,275" size="150,30" />
+</Struts2Diagram>
+

@@ -1,0 +1,94 @@
+.textCen{text-align: center;}
+.minSize{font-size:0.9rem;}
+.smallSize{font-size:0.7rem;}
+.cenSize{font-size:1rem;}
+.bigSize{font-size:1.1rem;}
+i{font-style: normal;}
+.redCol{color:#ef5e4b;}
+.clear{clear:both;}
+/*娉ㄥ唽*/
+.moneyBody{width:100%;height:100%;background: #fff;}
+.moneycont{width:80%;margin:0 auto;}
+.moneyMatter{width:100%;padding:10% 0;}
+.moneyReg{width:80%;position: relative;padding: 10% 0;margin-left:10%;}
+.moneyRgb{position: absolute;top: 7%;border-radius:30px;border: 1px solid #ff5e3e;width:100%;}
+.moneyRegZc,.moneyLogi{width:50%;border-radius:30px;text-align: center;vertical-align: middle;display: block;float: left;padding: 5% 0;}
+.defaultCol{color:#313140;}
+.actCol{color:#fff;background: #ff5e3e;}
+.moneyDan{width:90%;margin:0 auto;}
+.moneyTab tr td{width:100%;}
+.moneyTl{width:100%;border:1px solid #a09b8b;height: 38px;line-height: 38px;margin-bottom: 5%;position: relative;}
+.myReg{border:none;height: 38px;line-height: 38px;}
+.myReg input{height: 38px;line-height: 38px;}
+.userReTitl{float: left;height: 38px;line-height: 38px;width: 70px;}
+.checkboxFive {width: 25px;height: 25px;position: relative;float:left;}
+.checkboxFive label {cursor: pointer;position: absolute;width: 22px;height: 22px;top: 0;left: 0;background: #00a6ff;border:1px solid #00a6ff;border-radius:100%;}
+.checkboxFive label:after {opacity: 0.2;content: '';position: absolute;width: 9px;height: 5px;background: transparent;top: 6px;left: 5px;border: 3px solid #fff;border-top: none;border-right: none;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
+.checkboxFive label:hover::after {opacity: 0.5;}
+.checkboxFive input[type=checkbox]:checked + label:after {opacity: 1;}
+.monyLogBox{width:100%;margin:0 auto 5%;}
+.monyCheckTit{height:22px;line-height: 22px;color:#00a6ff; border-bottom: 1px solid #00a6ff;padding-bottom: 1px;}
+.monyNext{width:80%;margin:10% 10% 0;text-align: center;background: #ff5d34 none repeat scroll 0 0;border: 0 none;color: #fff;cursor: pointer;box-shadow: 2px 2px #bb2f1a;padding:4% 0;}
+.monyFoot{width:80%;margin:10% 10% 0;text-align: center;line-height: 40px;}
+.monyStoc{color:#ff5d34;border-bottom: 1px solid #ff5d34;padding-bottom: 1px;}
+.monyBack{color:#00a6ff;border-bottom: 1px solid #00a6ff;padding-bottom: 1px;}
+.monyCode{font-size:0.6rem;height:39px;line-height: 38px;border-left:1px solid #a09b8b;display: inline-block;text-align: center;padding: 0 2px;position: absolute;right:0;z-index:2;}
+/*鑲＄エ寮�埛*/
+.moneyAcout{width:80%;margin:10% 10% 0;font-size: 2rem;color:#00a6ff;}
+.moneyAcout img{display: block;width:55%;margin:0 auto;}
+.acntTxt{width:80%;margin:10% 10% 0;text-align: center;}
+.acntTxt span{display: block;margin:2% auto;color:#868695;}
+/*棣栭〉*/
+.sucContain{position: absolute;width:100%;height:auto;}
+.titl{background:#004e99; color:#fff;font-size:1rem;text-align: center;padding:5% 0;}
+.titl>a{display: block;float:left;width:3%;margin-left:3%;}
+.titl>a>img{display:block;width:100%;}
+.titl>span{text-align: center; margin-left: -3%;}
+.containImg{width:90%;text-align: center;margin: 0 auto;}
+.list th{background:#f76151;padding:3%;color:#ffe5ae;}
+.list td{height:0.8em;border-left:1px dashed #f76151;width: 33%;}
+.list td:nth-child(2){width: 34%;}
+.list td:first-child{border-left:none;}
+.list tr:nth-of-type(odd){background:#fff;}
+.list tr:nth-of-type(even){background:#fff5e1;}
+.footer{width:100%;background:#f65640;padding:4% 0;font-size: 1.2em; }
+.aStyBig{color:#fff;}
+.left{float:left;}
+.orange{color:#f96900;}
+.phoneNum{margin-left: 10%;width: 90%;height: 3em;line-height: 3em;}
+.phoneNum .topList{display: block;width:1.4em;height: 3em;margin:0 auto;}
+.phoneNum .topNum{display: block;float: left;font-style: normal;border-radius: 1.4em;color: white;font-style: normal;height: 1.4em;line-height: 1.4em;list-style-type: none;text-align: center;width: 1.4em;background: #d2d2d2;margin-top:0.8em;margin-right:1em;}
+.topFir{background: rgba(0, 0, 0, 0) url("../images_account/top1.png") no-repeat scroll center center / 100% auto;}
+.topSec{background: rgba(0, 0, 0, 0) url("../images_account/top2.png") no-repeat scroll center center / 100% auto;}
+.topThi{background: rgba(0, 0, 0, 0) url("../images_account/top3.png") no-repeat scroll center center / 100% auto;}
+.listRgt{height:3em;line-height: 3em;}
+
+.moyIndexBan,.moyIndexTxt{width:100%;height:auto;background:#f65640;padding-bottom: 2%; }
+.moyIndexBan img{display: block;width:100%;}
+.indxA{color:#ffff00;border-bottom: 1px solid #ffff00;padding-bottom: 1px;}
+.indxReg{width:80%;margin:2% 10%;text-align: center;background: #e63e24 none repeat scroll 0 0;border: 0 none;color: #fff;cursor: pointer;box-shadow: 2px 2px #bb2f1a;padding:4% 0;}
+.bboxTop{background: #ffe5ae;width:100%;padding:5% 0;}
+.bboxTopTit{width:90%;margin:0 5%;}
+.topBg{display: block;float: left;background: rgba(0, 0, 0, 0) url("../images_account/titBg.png") no-repeat scroll center center / 100% auto;color:#ef5e4b;padding:0 1%;height: 36px;line-height: 36px;text-align: center;width: 130px;}
+.lookTop{float:right;border:1px solid #ef5e4b;border-radius:10px;color:#ef5e4b;height: 32px;line-height: 32px;padding:0 1%;}
+.indexNum{background: #ffe5ae;width:95%;padding:3% 0 3% 5%;}
+.hidBody{width:100%;height:100%;position: fixed;background: rgba(0,0,0,0.5);}
+.hidde{width:80%;position: absolute;left:10%;top:35%;background: #fff;text-align: center;padding: 5% 0;line-height: 25px;border-radius: 10px;}
+.chartNum{padding:2%;}
+/*鎴戠殑鎺掕*/
+.luckyBody{width:84%;margin:0 5%;background: #fff;padding:3%;}
+.pdUp{padding:3%;text-align: left;}
+/*閭�濂藉弸鍙傝禌*/
+.moneyShare{width:100%;background: #fff5e1;text-align: center;padding: 5% 0;}
+.moneyShare a{display: inline-block;margin:0 auto;color: #000;font-size:1rem;}
+.moneyShare a img{display: block;margin: 0 auto;width:50%;}
+.inviteTxt{text-align: center;font-size:0.9rem;background: #fffcf7;width:100%; padding: 10% 0;}
+/*姣旇禌瑙勫垯*/
+.gameRule{width:90%;margin:0 5%;}
+.gameRule h1{font-size:1.2rem;text-align: center;padding: 5px 0;}
+.gameRule p{font-size:0.8rem;padding: 2px 0;}
+.moneyFg{height: 10px;}
+.textInd span{visibility:hidden;}
+.ruleBtn{width:100%;text-align: center;margin: 4% 0;padding: 3% 0;}
+.ruleBtn a{padding:3% 5%;border:1px solid black;text-align: center;margin:0 auto;color:#000;}
+input[type='button']{-webkit-appearance: none;}
